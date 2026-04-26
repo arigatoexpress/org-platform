@@ -1,0 +1,12 @@
+{
+  "MessageType": "PositionReport",
+  "Message": {
+    "PositionReport": {
+      "UserID": 422123456,
+      "Latitude": 25.2697,
+      "Longitude": 55.3095,
+      "NavigationalStatus": 0
+    }
+  }
+}
+

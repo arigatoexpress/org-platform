@@ -1,0 +1,15 @@
+[workspace]
+root = "."
+
+[safety]
+default_mode = "write-with-tests"
+live_trading = false
+live_telegram = false
+allow_secret_printing = false
+
+[commands]
+bootstrap = "./scripts/bootstrap.sh"
+test = "make test"
+intel_demo = "make intel-demo"
+crypto_demo = "make crypto-demo"
+

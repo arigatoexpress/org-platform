@@ -1,0 +1,14 @@
+app = "sapphire-org-platform"
+primary_region = "den"
+
+[build]
+  dockerfile = "../Dockerfile"
+
+[env]
+  ORG_PLATFORM_OFFLINE = "false"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 512
+

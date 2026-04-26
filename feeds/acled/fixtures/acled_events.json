@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "event_id_cnty": "YEM-FIXTURE-1",
+      "event_date": "2026-04-26",
+      "country": "Yemen",
+      "location": "Red Sea coast",
+      "latitude": "15.3694",
+      "longitude": "44.1910",
+      "actor1": "Houthi forces",
+      "actor2": "Commercial shipping",
+      "notes": "Fixture: Red Sea conflict pressure relevant to shipping risk."
+    }
+  ]
+}
+

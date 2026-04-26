@@ -1,0 +1,312 @@
+[
+  {
+    "id": "3c6ec5dfeabfcf00",
+    "ts": "2026-04-26T20:11:07.195741Z",
+    "title": "DeepStateMap occupied territory feature 1",
+    "source": "DeepStateMap mirror",
+    "source_url": "https://raw.githubusercontent.com/cyterat/deepstate-map-data/main/deepstate-map-data.geojson.gz",
+    "geo": {
+      "lat": 45.211860509999994,
+      "lon": 36.005840245,
+      "label": "DeepStateMap occupied-area centroid"
+    },
+    "actors": [
+      "Russia",
+      "Ukraine"
+    ],
+    "raw": {
+      "properties": {
+        "date": null
+      }
+    },
+    "severity": 3,
+    "tags": [
+      "conflict",
+      "ukraine",
+      "map"
+    ],
+    "mock": false
+  },
+  {
+    "id": "b8d85ceb4aae30f0",
+    "ts": "2026-04-26T20:11:07.197287Z",
+    "title": "DeepStateMap occupied territory feature 2",
+    "source": "DeepStateMap mirror",
+    "source_url": "https://raw.githubusercontent.com/cyterat/deepstate-map-data/main/deepstate-map-data.geojson.gz",
+    "geo": {
+      "lat": 45.211860509999994,
+      "lon": 36.005840245,
+      "label": "DeepStateMap occupied-area centroid"
+    },
+    "actors": [
+      "Russia",
+      "Ukraine"
+    ],
+    "raw": {
+      "properties": {
+        "date": null
+      }
+    },
+    "severity": 3,
+    "tags": [
+      "conflict",
+      "ukraine",
+      "map"
+    ],
+    "mock": false
+  },
+  {
+    "id": "2a8faa491002eb96",
+    "ts": "2026-04-26T20:11:12.434462Z",
+    "title": "OFAC SDN match: BANK MARKAZI JOMHOURI ISLAMI IRAN",
+    "source": "OFAC SDN",
+    "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML",
+    "geo": null,
+    "actors": [
+      "BANK MARKAZI JOMHOURI ISLAMI IRAN"
+    ],
+    "raw": {
+      "sdn_type": "Entity",
+      "program": "IRAN"
+    },
+    "severity": 4,
+    "tags": [
+      "sanctions",
+      "iran",
+      "ofac"
+    ],
+    "mock": false
+  },
+  {
+    "id": "b4b9bd79447e4d5a",
+    "ts": "2026-04-26T20:11:12.434522Z",
+    "title": "OFAC SDN match: BANK MASKAN",
+    "source": "OFAC SDN",
+    "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML",
+    "geo": null,
+    "actors": [
+      "BANK MASKAN"
+    ],
+    "raw": {
+      "sdn_type": "Entity",
+      "program": "IRAN"
+    },
+    "severity": 4,
+    "tags": [
+      "sanctions",
+      "iran",
+      "ofac"
+    ],
+    "mock": false
+  },
+  {
+    "id": "4b914405799c314c",
+    "ts": "2026-04-26T20:11:12.434540Z",
+    "title": "OFAC SDN match: BANK REFAH KARGARAN",
+    "source": "OFAC SDN",
+    "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML",
+    "geo": null,
+    "actors": [
+      "BANK REFAH KARGARAN"
+    ],
+    "raw": {
+      "sdn_type": "Entity",
+      "program": "IRAN"
+    },
+    "severity": 4,
+    "tags": [
+      "sanctions",
+      "iran",
+      "ofac"
+    ],
+    "mock": false
+  },
+  {
+    "id": "5b9dc22901cf56dc",
+    "ts": "2026-04-26T20:11:12.434555Z",
+    "title": "OFAC SDN match: BANK KESHAVARZI IRAN",
+    "source": "OFAC SDN",
+    "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML",
+    "geo": null,
+    "actors": [
+      "BANK KESHAVARZI IRAN"
+    ],
+    "raw": {
+      "sdn_type": "Entity",
+      "program": "IRAN"
+    },
+    "severity": 4,
+    "tags": [
+      "sanctions",
+      "iran",
+      "ofac"
+    ],
+    "mock": false
+  },
+  {
+    "id": "2f4168eb7f54ef1a",
+    "ts": "2026-04-24T18:04:11Z",
+    "title": "Iran Deploys More Mines in the Strait of Hormuz, Sources Say",
+    "source": "UANI blog",
+    "source_url": "https://www.unitedagainstnucleariran.com/news/iran-deploys-more-mines-strait-of-hormuz-sources-say",
+    "geo": null,
+    "actors": [
+      "Iran"
+    ],
+    "raw": {
+      "pubDate": "Fri, 24 Apr 2026 18:04:11 +0000",
+      "fixture": false
+    },
+    "severity": 3,
+    "tags": [
+      "sanctions",
+      "iran",
+      "uani",
+      "shipping"
+    ],
+    "mock": false
+  },
+  {
+    "id": "c998f9f2429182b3",
+    "ts": "2026-04-23T21:24:58Z",
+    "title": "Trump says Iran having a 'hard time' figuring out who is in charge",
+    "source": "UANI blog",
+    "source_url": "https://www.unitedagainstnucleariran.com/uani_in_news/trump-says-iran-having-hard-time-figuring-out-who-charge",
+    "geo": null,
+    "actors": [
+      "Iran"
+    ],
+    "raw": {
+      "pubDate": "Thu, 23 Apr 2026 21:24:58 +0000",
+      "fixture": false
+    },
+    "severity": 3,
+    "tags": [
+      "sanctions",
+      "iran",
+      "uani",
+      "shipping"
+    ],
+    "mock": false
+  },
+  {
+    "id": "e1d1bddaa88f72df",
+    "ts": "2026-04-26T00:00:00Z",
+    "title": "AIS fixture position report for MMSI 422123456",
+    "source": "AISStream",
+    "source_url": "https://aisstream.io/documentation.html",
+    "geo": {
+      "lat": 25.2697,
+      "lon": 55.3095,
+      "label": "Fixture vessel"
+    },
+    "actors": [
+      "422123456"
+    ],
+    "raw": {
+      "MessageType": "PositionReport",
+      "Message": {
+        "PositionReport": {
+          "UserID": 422123456,
+          "Latitude": 25.2697,
+          "Longitude": 55.3095,
+          "NavigationalStatus": 0
+        }
+      }
+    },
+    "severity": 2,
+    "tags": [
+      "ais",
+      "maritime",
+      "shipping"
+    ],
+    "mock": true
+  },
+  {
+    "id": "bc6f1a0f0008de75",
+    "ts": "2026-04-26T00:00:00Z",
+    "title": "Fixture: Red Sea conflict pressure relevant to shipping risk.",
+    "source": "ACLED",
+    "source_url": "https://acleddata.com/acled-api-documentation",
+    "geo": {
+      "lat": 15.3694,
+      "lon": 44.191,
+      "label": "Red Sea coast"
+    },
+    "actors": [
+      "Houthi forces",
+      "Commercial shipping"
+    ],
+    "raw": {
+      "event_id_cnty": "YEM-FIXTURE-1",
+      "event_date": "2026-04-26",
+      "country": "Yemen",
+      "location": "Red Sea coast",
+      "latitude": "15.3694",
+      "longitude": "44.1910",
+      "actor1": "Houthi forces",
+      "actor2": "Commercial shipping",
+      "notes": "Fixture: Red Sea conflict pressure relevant to shipping risk."
+    },
+    "severity": 3,
+    "tags": [
+      "conflict",
+      "acled",
+      "red-sea"
+    ],
+    "mock": true
+  },
+  {
+    "id": "f96c614fd4bccac9",
+    "ts": "2026-04-26T12:00:00Z",
+    "title": "Fixture: dark activity risk near Gulf shipping lane",
+    "source": "Windward",
+    "source_url": "https://insights.windward.ai/",
+    "geo": {
+      "lat": 26.5,
+      "lon": 52.0,
+      "label": "Persian Gulf"
+    },
+    "actors": [
+      "422123456"
+    ],
+    "raw": {
+      "ts": "2026-04-26T12:00:00",
+      "title": "Fixture: dark activity risk near Gulf shipping lane",
+      "vessel_mmsi": 422123456,
+      "alert_type": "dark_activity",
+      "area": "Persian Gulf",
+      "lat": 26.5,
+      "lon": 52.0
+    },
+    "severity": 4,
+    "tags": [
+      "maritime",
+      "sanctions",
+      "windward"
+    ],
+    "mock": true
+  },
+  {
+    "id": "3056db358e67f371",
+    "ts": "2026-04-26T00:00:00Z",
+    "title": "Fixture: TankerTrackers-style Iran export watch item",
+    "source": "TankerTrackers",
+    "source_url": "https://x.com/TankerTrackers",
+    "geo": null,
+    "actors": [
+      "Iran-linked tanker"
+    ],
+    "raw": {
+      "fixture": true
+    },
+    "severity": 3,
+    "tags": [
+      "maritime",
+      "iran",
+      "oil",
+      "shipping"
+    ],
+    "mock": true
+  }
+]

@@ -1,0 +1,12 @@
+tap "homebrew/bundle"
+brew "git"
+brew "gh"
+brew "jq"
+brew "ripgrep"
+brew "mise"
+brew "direnv"
+brew "gitleaks"
+brew "duckdb"
+brew "node"
+brew "python@3.12"
+

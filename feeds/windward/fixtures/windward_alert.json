@@ -1,0 +1,10 @@
+{
+  "ts": "2026-04-26T12:00:00",
+  "title": "Fixture: dark activity risk near Gulf shipping lane",
+  "vessel_mmsi": 422123456,
+  "alert_type": "dark_activity",
+  "area": "Persian Gulf",
+  "lat": 26.5,
+  "lon": 52.0
+}
+
