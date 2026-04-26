@@ -55,3 +55,16 @@ Changed:
 
 Next:
 - Start follow-up workstream branches from `origin/main` and open draft PRs per branch.
+
+## 2026-04-26 14:30 America/Denver
+
+Changed:
+- Diagnosed local dashboard outage: no process was listening on `127.0.0.1:3000`.
+- Restarted dashboard in a detached `screen` session so it survives the shell command ending.
+- Added `scripts/start_dashboard.sh`, `scripts/stop_dashboard.sh`, `make dashboard-bg`, and `make dashboard-stop`.
+
+Verified:
+- `curl http://127.0.0.1:3000` returns HTTP 200.
+- `events.json` and `crypto.json` are reachable from the dashboard server.
+- `make test` passed.
+- `make lint` passed.

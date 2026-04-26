@@ -8,10 +8,10 @@ Autonomous intelligence organization platform for Sapphire OS: agent tooling, OS
 ./scripts/bootstrap.sh
 make intel-demo
 make crypto-demo
-make dashboard
+make dashboard-bg
 ```
 
-Then open `http://localhost:3000` from `surface/dashboard`.
+Then open `http://127.0.0.1:3000`. Use `make dashboard-stop` to stop the background server.
 
 ## Demos
 
@@ -19,4 +19,3 @@ Then open `http://localhost:3000` from `surface/dashboard`.
 - `make crypto-demo` writes a ranked token watchlist to `data/crypto/watchlist.json`, `crypto/watchlist-<date>.md`, and `surface/dashboard/public/crypto.json`.
 
 Paid/gated sources are fixture-backed and visibly marked `[MOCK]` until credentials are configured through `.env` or a secret manager.
-

@@ -1,4 +1,4 @@
-.PHONY: bootstrap test lint intel-demo crypto-demo demos dashboard dashboard-build clean
+.PHONY: bootstrap test lint intel-demo crypto-demo demos dashboard dashboard-bg dashboard-stop dashboard-build clean
 
 PYTHON ?= .venv/bin/python
 PIP ?= .venv/bin/pip
@@ -24,9 +24,14 @@ demos: intel-demo crypto-demo
 dashboard:
 	cd surface/dashboard && npm run dev -- --hostname 127.0.0.1 --port 3000
 
+dashboard-bg:
+	./scripts/start_dashboard.sh
+
+dashboard-stop:
+	./scripts/stop_dashboard.sh
+
 dashboard-build:
 	cd surface/dashboard && npm run build
 
 clean:
 	rm -rf .pytest_cache .ruff_cache **/__pycache__ surface/dashboard/.next
-

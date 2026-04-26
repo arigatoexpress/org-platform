@@ -65,7 +65,7 @@ make intel-demo
 make crypto-demo
 npm audit --prefix surface/dashboard --audit-level=moderate
 npm run build --prefix surface/dashboard
-make dashboard
+make dashboard-bg
 ```
 
 Verified in this slice:
@@ -76,6 +76,7 @@ Verified in this slice:
 - `make crypto-demo` passed.
 - `npm audit --prefix surface/dashboard --audit-level=moderate` passed.
 - `npm run build --prefix surface/dashboard` passed.
+- `make dashboard-bg` starts the local dashboard in a detached `screen` session.
 
 ## Top 5 Next Actions
 
