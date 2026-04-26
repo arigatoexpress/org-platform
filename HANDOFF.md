@@ -79,11 +79,11 @@ Verified in this slice:
 
 ## Top 5 Next Actions
 
-1. Identify the repo/service that owns the deployed BigQuery-backed `sapphirealpha.xyz` API routes.
-2. Create BigQuery or API contract for `TokenSignal` ingestion into Sapphire Alpha.
-3. Provision bounded credentials for AISStream and ACLED, then replace two fixture sources.
-4. Add a real entity-resolution enrichment pass joining AIS MMSI/IMO to OFAC maritime entities.
-5. Push this repo to a private GitHub remote and split follow-up branches/PRs by workstream.
+1. Open follow-up workstream branches from `origin/main` and use draft PRs for incremental changes.
+2. Identify the repo/service that owns the deployed BigQuery-backed `sapphirealpha.xyz` API routes.
+3. Create BigQuery or API contract for `TokenSignal` ingestion into Sapphire Alpha.
+4. Provision bounded credentials for AISStream and ACLED, then replace two fixture sources.
+5. Add a real entity-resolution enrichment pass joining AIS MMSI/IMO to OFAC maritime entities.
 
 ## Top 5 Questions
 
@@ -92,3 +92,9 @@ Verified in this slice:
 3. Which source should be canonical for current `sapphirealpha.xyz` deployment: local `SapphireAlpha`, Cloud Run, or another repo?
 4. Which paid connector should be provisioned first: Windward, AISStream, ACLED, X, Dune, or CryptoPanic?
 5. Should Cowork automations write to local folders first or directly into Drive/Notion once connectors exist?
+
+## GitHub
+
+- Private repo: `https://github.com/arigatoexpress/org-platform`
+- Baseline commit pushed to `main`: `ec3892a`
+- Draft PRs were not opened for the root commit because the repo did not exist before this slice; the next workstream changes should branch from `origin/main`.

@@ -45,4 +45,13 @@ Current assumptions:
 
 Open questions:
 - Which repo or Cloud Run service owns the current BigQuery-backed `sapphirealpha.xyz` API routes?
-- Should `org-platform` be pushed as a new private GitHub repo now, or nested under Sapphire's existing org-control work?
+- Whether follow-up workstream PRs should target `arigatoexpress/org-platform` directly or be mirrored into Sapphire's control-tower repo.
+
+## 2026-04-26 14:25 America/Denver
+
+Changed:
+- Created private GitHub repo `arigatoexpress/org-platform`.
+- Pushed local `main` baseline commit `ec3892a`.
+
+Next:
+- Start follow-up workstream branches from `origin/main` and open draft PRs per branch.
