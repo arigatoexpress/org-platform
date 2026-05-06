@@ -1,4 +1,4 @@
-.PHONY: bootstrap test lint intel-demo crypto-demo demos dashboard dashboard-bg dashboard-stop dashboard-build clean
+.PHONY: bootstrap test lint intel-demo crypto-demo demos dashboard dashboard-bg dashboard-stop dashboard-build dashboard-smoke clean
 
 PYTHON ?= .venv/bin/python
 PIP ?= .venv/bin/pip
@@ -32,6 +32,9 @@ dashboard-stop:
 
 dashboard-build:
 	cd surface/dashboard && npm run build
+
+dashboard-smoke:
+	$(PYTHON) scripts/check_dashboard_smoke.py
 
 clean:
 	rm -rf .pytest_cache .ruff_cache **/__pycache__ surface/dashboard/.next

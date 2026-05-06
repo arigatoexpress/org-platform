@@ -12,6 +12,7 @@ make dashboard-bg
 ```
 
 Then open `http://127.0.0.1:3000`. Use `make dashboard-stop` to stop the background server.
+Use `make dashboard-smoke` to verify the committed dashboard JSON and build prerequisites without regenerating demo artifacts.
 
 ## Demos
 
