@@ -54,13 +54,19 @@ def main() -> None:
     dashboard_path.parent.mkdir(parents=True, exist_ok=True)
     dashboard_path.write_text(json.dumps(events_to_jsonable(events), indent=2) + "\n")
 
-    write_event_store(events, root / "data" / "store" / "events.duckdb")
+    store_written = write_event_store(
+        events,
+        root / "data" / "store" / "events.duckdb",
+        required=not offline,
+    )
 
     brief_path = root / "Intelligence" / f"iran-shipping-{today}.md"
     brief_path.parent.mkdir(parents=True, exist_ok=True)
     brief_path.write_text(render_brief(events, today))
 
     print(f"Wrote {len(events)} events to {events_path}")
+    if not store_written:
+        print("Skipped DuckDB event store because duckdb is not installed in offline mode")
     print(f"Wrote brief to {brief_path}")
     print(f"Wrote dashboard data to {dashboard_path}")
 

@@ -6,8 +6,13 @@ from pathlib import Path
 from normalize.schema import Event
 
 
-def write_event_store(events: list[Event], db_path: Path) -> None:
-    import duckdb
+def write_event_store(events: list[Event], db_path: Path, *, required: bool = True) -> bool:
+    try:
+        import duckdb
+    except ModuleNotFoundError as exc:
+        if required or exc.name != "duckdb":
+            raise
+        return False
 
     db_path.parent.mkdir(parents=True, exist_ok=True)
     rows = [
@@ -54,3 +59,4 @@ def write_event_store(events: list[Event], db_path: Path) -> None:
                 """,
                 rows,
             )
+    return True
