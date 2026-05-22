@@ -2,26 +2,41 @@ from __future__ import annotations
 
 import json
 import os
+import sys
 from datetime import UTC, datetime
 from pathlib import Path
+from typing import TYPE_CHECKING
 
-from feeds.acled.client import fetch_events as fetch_acled
-from feeds.ais.client import fetch_events as fetch_ais
-from feeds.deepstatemap.client import fetch_events as fetch_deepstate
-from feeds.ofac.client import fetch_events as fetch_ofac
-from feeds.tankertrackers.client import fetch_events as fetch_tankertrackers
-from feeds.uani.client import fetch_events as fetch_uani
-from feeds.windward.client import fetch_events as fetch_windward
-from normalize.schema import Event, events_to_jsonable
-from store.duck import write_event_store
+if TYPE_CHECKING:
+    from normalize.schema import Event
+
+
+def _ensure_repo_root_on_path() -> None:
+    repo_root = Path(__file__).resolve().parents[1]
+    repo_root_str = str(repo_root)
+    if repo_root_str not in sys.path:
+        sys.path.insert(0, repo_root_str)
+
+
+_ensure_repo_root_on_path()
 
 
 def main() -> None:
+    from feeds.acled.client import fetch_events as fetch_acled
+    from feeds.ais.client import fetch_events as fetch_ais
+    from feeds.deepstatemap.client import fetch_events as fetch_deepstate
+    from feeds.ofac.client import fetch_events as fetch_ofac
+    from feeds.tankertrackers.client import fetch_events as fetch_tankertrackers
+    from feeds.uani.client import fetch_events as fetch_uani
+    from feeds.windward.client import fetch_events as fetch_windward
+    from normalize.schema import events_to_jsonable
+    from store.duck import write_event_store
+
     root = Path(os.getenv("ORG_PLATFORM_OUTPUT_DIR", ".")).resolve()
     offline = os.getenv("ORG_PLATFORM_OFFLINE", "").lower() in {"1", "true", "yes"}
     today = datetime.now(UTC).date().isoformat()
 
-    events: list[Event] = []
+    events = []
     events.extend(fetch_deepstate(limit=2, offline=offline))
     events.extend(fetch_ofac(query="IRAN", limit=4, offline=offline))
     events.extend(fetch_uani(limit=2, offline=offline))

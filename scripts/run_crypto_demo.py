@@ -2,15 +2,26 @@ from __future__ import annotations
 
 import json
 import os
+import sys
 from datetime import UTC, datetime
 from pathlib import Path
 
-from crypto.feeds.coingecko.client import fetch_trending
-from crypto.feeds.defillama.client import fetch_protocol_liquidity
-from crypto.score.scoring import score_signals
+
+def _ensure_repo_root_on_path() -> None:
+    repo_root = Path(__file__).resolve().parents[1]
+    repo_root_str = str(repo_root)
+    if repo_root_str not in sys.path:
+        sys.path.insert(0, repo_root_str)
+
+
+_ensure_repo_root_on_path()
 
 
 def main() -> None:
+    from crypto.feeds.coingecko.client import fetch_trending
+    from crypto.feeds.defillama.client import fetch_protocol_liquidity
+    from crypto.score.scoring import score_signals
+
     root = Path(os.getenv("ORG_PLATFORM_OUTPUT_DIR", ".")).resolve()
     offline = os.getenv("ORG_PLATFORM_OFFLINE", "").lower() in {"1", "true", "yes"}
     today = datetime.now(UTC).date().isoformat()
