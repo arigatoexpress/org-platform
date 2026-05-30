@@ -1,19 +1,46 @@
-# AGENTS.md
+# AGENTS.md — org-platform
 
-Codex is Ari's primary operator for Sapphire OS production-autonomy work.
+## What this repo does
 
-Default stance:
-- Lead from current-state verification, not stale audit notes.
-- Keep `/Users/aribs/Code/Sapphire` clean on `origin/main` whenever possible.
-- Use `/Users/aribs/Code/_worktrees/` for Sapphire PR work and remove clean worktrees after merge or abandonment.
-- Preserve local WIP before cleanup with a backup branch, patch, and stash.
-- Keep Claude as a constrained reviewer/helper unless Ari explicitly gives it ownership of a task.
-- Never expose secrets, enable real trading, or send real Telegram test messages.
+Autonomous intelligence organization platform for Sapphire OS. It collects OSINT signals, normalizes events, scores crypto tokens, and surfaces results through a local dashboard. The current focus is reliable data pipelines and a fast static dashboard fallback.
 
-Project rules for this repo:
-- Build the smallest end-to-end slice first, then widen the fan-in.
-- Keep every paid or gated connector behind explicit credentials and fixtures.
-- Use TypeScript for browser/edge surfaces and Python for data, scoring, and Foundry transforms.
-- Respect source terms. Do not scrape sources that forbid it; use official APIs or document why a fixture is used.
-- Prefer durable artifacts over chat output: plans, tests, dashboards, configs, ADRs, and handoffs.
+## Key directories and files
 
+| Path | Role |
+|---|---|
+| `feeds/` | Source collectors (RSS, APIs, fixtures) |
+| `normalize/` | Event deduplication and schema normalization |
+| `enrich/` | Scoring, tagging, and entity resolution |
+| `store/` | DuckDB persistence and query layer |
+| `crypto/` | Token watchlist and market signal logic |
+| `surface/dashboard/` | Static dashboard UI build |
+| `Intelligence/` | Generated briefs and human-readable output |
+| `configs/` | Region, source, and scoring configuration |
+| `plans/` | ADRs, runbooks, and migration notes |
+| `scripts/bootstrap.sh` | One-time environment setup |
+| `Makefile` | Task orchestration (demos, dashboard, tests) |
+
+## How to run tests / dev server
+
+```bash
+# Tests
+python -m pytest tests/ -q
+
+# Dev dashboard
+make dashboard-bg
+make dashboard-smoke    # verify without regenerating
+```
+
+## Safety boundaries
+
+- **Do NOT** expose secrets, API keys, or credentials in code or logs
+- **Do NOT** enable real trading or money movement
+- **Do NOT** scrape sources that explicitly forbid it; use official APIs or fixtures
+- **Do NOT** modify `Makefile` without testing the affected targets
+- Keep every paid or gated connector behind explicit credentials and fixtures
+
+## Current status
+
+- Local demo path stable (`make intel-demo`, `make crypto-demo`)
+- Dashboard serves static JSON at `http://127.0.0.1:3000`
+- Crypto and intel pipelines are fixture-backed by default
